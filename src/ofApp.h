@@ -3,6 +3,9 @@
 #include "ofMain.h"
 #include "ofxLiquidFun.h"
 #include "ofxGui.h"
+#include "ofxOPC.h"
+
+#define LEDS 19
 
 class ofApp : public ofBaseApp{
 
@@ -28,11 +31,12 @@ class ofApp : public ofBaseApp{
     vector <ofPtr<ofxBox2dRect> > boxes;			  //	defalut box2d rects
     ofxBox2dParticleSystem particles;			      //    LiquidFun particle system
     int particleCount = 2000;
-    float wBox = 10.0;
     float factor = 5;
     
     ofxPanel gui;
     ofxIntSlider hue;
     ofxIntSlider saturation;
     ofxIntSlider brightness;
+    
+    ofxOPC client;
 };

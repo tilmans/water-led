@@ -22,12 +22,13 @@ void ofApp::setup(){
         particles.createParticle(position, velocity);
     }
     
-    wBox = ofGetWidth() / 10;
     
     gui.setup( "Parameters", "settings.xml" );
     gui.add( hue.setup( "hue", 170, 0, 255 ) );
     gui.add( saturation.setup( "saturation", 255, 0, 255 ) );
     gui.add( brightness.setup( "brightness", 1, 0, 20 ) );
+    
+    client.setup("127.0.0.1", 7890);
 }
 
 //--------------------------------------------------------------
@@ -37,6 +38,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    float wBox = ofGetWidth() / LEDS;
     
     for(int i=0; i<circles.size(); i++) {
         ofFill();
@@ -52,13 +54,26 @@ void ofApp::draw(){
     
     particles.draw();
     
-    array<float,10> f = particles.getXPositions();
-    for (int i=0; i<10; i++) {
+    vector<float> f = particles.getXPositions(LEDS);
+    vector<ofColor> strip;
+    // string text = "LEDs: ";
+    for (int i=0; i<LEDS; i++) {
         // ofLog(OF_LOG_NOTICE, "Value"+ofToString(f[i]));
         // *f[i]
         ofColor c = ofColor::fromHsb(hue,saturation,255*f[i]*brightness);
         ofSetColor(c);
+        strip.push_back(c);
         ofDrawRectangle(i*wBox+i, 100, wBox, 100);
+        // text += ofToString(f[i]) + ", ";
+    }
+    // ofLog(OF_LOG_NOTICE, text);
+    if (!client.isConnected())
+    {
+        client.tryConnecting();
+    }
+    else
+    {
+        client.writeChannelOne(strip);
     }
 
     gui.draw();
