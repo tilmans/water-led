@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "94BB0423C628F39681BC1D563CB86A36BDF2D5F5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "18EEBE2F1A8F6F6C05DBFC5AE1BCF46FFB18DBA8" : 0,
+    "31E280106F6B078BEC34817BA46938F466369C05" : 0,
+    "94BB0423C628F39681BC1D563CB86A36BDF2D5F5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "821E2B18-38D2-48E5-BCFB-C3BB7462D9E1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "18EEBE2F1A8F6F6C05DBFC5AE1BCF46FFB18DBA8" : "..\/..\/addons\/ofxLiquidFun",
+    "31E280106F6B078BEC34817BA46938F466369C05" : "..\/..\/addons\/ofxOPC",
+    "94BB0423C628F39681BC1D563CB86A36BDF2D5F5" : "liquid\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "liquid",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "liquid.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/armadillu\/ofxLiquidFun.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "18EEBE2F1A8F6F6C05DBFC5AE1BCF46FFB18DBA8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DHaylock\/ofxOPC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "31E280106F6B078BEC34817BA46938F466369C05"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tilmans\/water-led.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "94BB0423C628F39681BC1D563CB86A36BDF2D5F5"
+    }
+  ]
+}
