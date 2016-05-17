@@ -37,6 +37,8 @@ class ofApp : public ofBaseApp{
     ofxIntSlider hue;
     ofxIntSlider saturation;
     ofxIntSlider brightness;
+    ofxIntSlider force;
+    ofxIntSlider gravity;
     
     ofxOPC client;
 };

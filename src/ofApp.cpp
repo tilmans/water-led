@@ -7,7 +7,7 @@ void ofApp::setup(){
     ofSetLogLevel(OF_LOG_NOTICE);
     
     box2d.init();
-    box2d.setGravity(0, 20);
+    box2d.setGravity(0, 10);
     box2d.setFPS(30.0);
     
     // box2d.registerGrabbing();
@@ -27,6 +27,8 @@ void ofApp::setup(){
     gui.add( hue.setup( "hue", 170, 0, 255 ) );
     gui.add( saturation.setup( "saturation", 255, 0, 255 ) );
     gui.add( brightness.setup( "brightness", 1, 0, 20 ) );
+    gui.add( force.setup("Force", 2, 1, 20));
+    gui.add( gravity.setup("gravity", 10, 1, 50));
     
     client.setup("127.0.0.1", 7890);
 }
@@ -38,6 +40,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    box2d.setGravity(0, gravity);
+
     float wBox = ofGetWidth() / LEDS;
     
     for(int i=0; i<circles.size(); i++) {
@@ -83,12 +87,12 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
     if (key == 'j') {
         for (int i = 0; i < particleCount; i++) {
-            particles.applyForce(i, 2, 0);
+            particles.applyForce(i, force, 0);
         }
     }
     if (key == 'k') {
         for (int i = 0; i < particleCount; i++) {
-            particles.applyForce(i, -2, 0);
+            particles.applyForce(i, force*-1, 0);
         }
     }
 }
